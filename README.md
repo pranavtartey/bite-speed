@@ -4,7 +4,7 @@ A modern, extensible flow editor built with React, TypeScript, React Flow, and T
 
 ---
 
-## ✨ Features
+## Features
 
 - **Custom Node UI**: Message nodes styled with icons, colored headers, and connection handles
 - **Dynamic Side Panel**: Add new nodes via a card-based action panel
@@ -64,7 +64,7 @@ src/
 
 ---
 
-## 🧑‍💻 Usage
+## Usage
 
 1. **Add a message node**: Click the "Message" card in the side panel, enter your message, and submit.
 2. **Connect nodes**: Drag from the handle of one node to another to create edges.
@@ -136,7 +136,7 @@ src/
 
 ---
 
-## 🙏 Credits
+## Credits
 - [React Flow](https://reactflow.dev/)
 - [Sonner](https://sonner.emilkowal.ski/)
 - [Lucide Icons](https://lucide.dev/)
