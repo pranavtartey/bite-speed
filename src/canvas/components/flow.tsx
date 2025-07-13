@@ -1,4 +1,4 @@
-import { Background, Controls, Panel, ReactFlow } from "@xyflow/react";
+import { Background, Panel, ReactFlow } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { toast } from "sonner";
 import useFlow from "../hooks/useFlow";
@@ -8,7 +8,7 @@ import MessageNode from "./message-node";
 const nodeTypes = { message: MessageNode };
 
 const Flow = () => {
-  const { edges, nodes, onEdgesChange, onNodesChange, onConnect, addNode, saveFlow, areAllNodesConnected } = useFlow();
+  const { edges, nodes, onEdgesChange, onNodesChange, onConnect, addNode, saveFlow } = useFlow();
 
   const handleSaveChanges = () => {
     const result = saveFlow();
