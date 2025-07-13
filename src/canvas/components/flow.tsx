@@ -12,7 +12,6 @@ const Flow = () => {
 
   const handleSaveChanges = () => {
     const result = saveFlow();
-    
     if (result.success) {
       toast.success(result.message, {
         position: "top-center",
@@ -23,7 +22,7 @@ const Flow = () => {
         }
       });
     } else {
-      toast.error(result.message, {
+      toast.error("Cannot save Flow", {
         position: "top-center",
         style: {
           background: "#ef4444",
@@ -34,27 +33,12 @@ const Flow = () => {
     }
   };
 
-  const isSaveDisabled = !areAllNodesConnected();
-
   return (
     <div className="h-[100vh] w-full ">
-      {/* <div style={{ height: "100%", width: "100%" }}> */}
-      <div className="py-2 px-20 bg-gray-100 z-10 h-14 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          {isSaveDisabled && nodes.length > 1 && (
-            <div className="text-red-600 text-sm font-medium">
-              ⚠️ Connect all nodes to save
-            </div>
-          )}
-        </div>
+      <div className="py-2 px-20 bg-gray-100 z-10 h-14 flex items-center justify-end">
         <button 
-          className={`px-3 py-1 rounded-lg font-semibold transition-all ${
-            isSaveDisabled 
-              ? "border-2 border-gray-400 text-gray-400 bg-gray-100 cursor-not-allowed" 
-              : "border-2 border-blue-600 text-blue-600 bg-white hover:bg-blue-50"
-          }`}
+          className={"px-3 py-1 rounded-lg font-semibold transition-all border-2 border-blue-600 text-blue-600 bg-white hover:bg-blue-50"}
           onClick={handleSaveChanges}
-          disabled={isSaveDisabled}
         >
           Save Changes
         </button>
@@ -75,7 +59,6 @@ const Flow = () => {
             <SidePanel addNode={addNode} />
           </Panel>
           <Background />
-          {/* <Controls /> */}
         </ReactFlow>
       </div>
     </div>
