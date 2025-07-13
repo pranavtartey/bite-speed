@@ -18,22 +18,26 @@ A modern, extensible flow editor built with React, TypeScript, React Flow, and T
 ## Getting Started
 
 ### 1. Clone the repo
+
 ```bash
 git clone <your-repo-url>
 cd <your-repo-folder>
 ```
 
 ### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Start the development server
+
 ```bash
 npm run dev
 ```
 
 ### 4. (If needed) Install Sonner for toasts
+
 ```bash
 npm install sonner
 ```
@@ -78,6 +82,7 @@ src/
 ## Extending the Editor
 
 ### Add a New Card & Form
+
 1. **Add a new state** in `side-panel-states.ts`:
    ```ts
    export const SIDE_PANEL_STATES = {
@@ -89,15 +94,15 @@ src/
 3. **Register your card and form** in `card-registry.ts`:
    ```ts
    CARD_REGISTRY.notification = {
-     id: 'notification',
-     title: 'Notification',
+     id: "notification",
+     title: "Notification",
      icon: Bell,
      state: SIDE_PANEL_STATES.NOTIFICATION,
-     description: 'Configure notifications',
+     description: "Configure notifications",
    };
    FORM_REGISTRY[SIDE_PANEL_STATES.NOTIFICATION] = {
-     id: 'notification-form',
-     title: 'Notification Settings',
+     id: "notification-form",
+     title: "Notification Settings",
      backIcon: ArrowLeft,
      component: NotificationForm,
    };
@@ -118,6 +123,7 @@ src/
 ---
 
 ## Dependencies
+
 - [React](https://react.dev/)
 - [React Flow](https://reactflow.dev/)
 - [Sonner](https://sonner.emilkowal.ski/) (for toasts)
@@ -127,16 +133,25 @@ src/
 
 ---
 
+## Hosted Link (Vercel)
+
+- [link 1](https://bite-speed-six.vercel.app/)
+- [link 2](https://bite-speed-git-main-pranav-tarteys-projects.vercel.app/)
+- [link 3](https://bite-speed-4blkh89rf-pranav-tarteys-projects.vercel.app/)
+
+---
+
 ## Further Customization
+
 - **Add more node types**: Create new node components and register them in `nodeTypes`.
 - **Add more actions**: Expand the card/form registry for new flow actions.
 - **Style tweaks**: Adjust Tailwind classes or use inline styles for custom colors.
 - **Validation logic**: Enhance or change the connection rules in `useFlow.ts`.
 
-
 ---
 
 ## Credits
+
 - [React Flow](https://reactflow.dev/)
 - [Sonner](https://sonner.emilkowal.ski/)
 - [Lucide Icons](https://lucide.dev/)
