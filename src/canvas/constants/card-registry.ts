@@ -38,7 +38,7 @@ export const CARD_REGISTRY: Record<string, CardConfig> = {
 export const FORM_REGISTRY: Record<string, FormConfig> = {
   [SIDE_PANEL_STATES.MESSAGE]: {
     id: 'message-form',
-    title: 'Message Form',
+    title: 'Message',
     backIcon: ArrowLeft,
     component: MessageForm
   }

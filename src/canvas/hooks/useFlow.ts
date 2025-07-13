@@ -34,6 +34,13 @@ const useFlow = () => {
         return newNode;
     }, []);
 
+    // Update a node's label by id
+    const updateNodeLabel = useCallback((id: string, newLabel: string) => {
+        setNodes((prevNodes) => prevNodes.map(node =>
+            node.id === id ? { ...node, data: { ...node.data, label: newLabel } } : node
+        ));
+    }, []);
+
     // Check if all nodes are connected
     const areAllNodesConnected = useCallback(() => {
         if (nodes.length <= 1) return true; // Single node or no nodes is considered connected
@@ -81,6 +88,7 @@ const useFlow = () => {
         onEdgesChange,
         onConnect,
         addNode,
+        updateNodeLabel,
         saveFlow,
         areAllNodesConnected
     }

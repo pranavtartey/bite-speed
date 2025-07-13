@@ -24,7 +24,7 @@ const FormContainer = ({ config, onBack, addNode }: FormContainerProps) => {
             <BackIcon className="w-5 h-5 text-gray-600" />
           </button>
         )}
-        <h3 className="text-lg font-semibold text-gray-800">{config.title}</h3>
+        <h3 className="text-lg text-center w-full font-semibold text-gray-500">{config.title}</h3>
       </div>
       
       {/* Form Content */}
