@@ -3,6 +3,9 @@ import "@xyflow/react/dist/style.css";
 import { toast } from "sonner";
 import useFlow from "../hooks/useFlow";
 import SidePanel from "./side-panel";
+import MessageNode from "./message-node";
+
+const nodeTypes = { message: MessageNode };
 
 const Flow = () => {
   const { edges, nodes, onEdgesChange, onNodesChange, onConnect, addNode, saveFlow, areAllNodesConnected } = useFlow();
@@ -63,6 +66,7 @@ const Flow = () => {
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
+          nodeTypes={nodeTypes}
         >
           <Panel
             className="h-[97%] bg-white border-l border-t border-black px-4"
